@@ -1,0 +1,9 @@
+线性表     List/ArrayList/LinkedList
+栈-队列    Queue/Linked/Stack
+二叉树  
+堆          PriorityQueue
+排序       Arrays.sort
+              List.sort
+              Collections.sort
+剑指offer
+
