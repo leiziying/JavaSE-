@@ -1,0 +1,34 @@
+比较两种重要的搜索数据结构：
+  1.搜索树（平衡）   有序
+     1.中序的有序性
+     2.时间负载的O(log(n))
+     3.平衡的调节比较复杂（代码复杂，耗时较大）
+  2.哈希     快
+      1.无序
+      2.O(1)
+      3.极端情况下，冲突到O(n)
+  3.二分查找
+      静态层面的查找
+尝试阅读HashMap源码
+   1.学会如何阅读源码
+   2.克服对源码的恐惧
+String 创建
+   s1=" ";
+   s2=new String(s1);
+   char[] a=....;
+   String 也是一种引用类型
+   String的比较
+       String s1="hello";
+       String s2="hello";
+       String s="hello"+" "+"word";一个对象，jvm会自动连接成一个字符串
+为什么String要不可变？（不可变对象的好处是什么？）
+   1.方便实现字符串对象池，如果String可变，那么对象池就需要考虑何时深拷贝字符串的问题了
+   2.不可变对象是线程安全的
+   3.不可变对象更方便缓存hash code，作为key时可以更有效的保存到HashMap中
+2.特征：
+   String返回所有String的方法，都是创建了一个新对象
+   问题：问一段代码中创建了多少对象
+3.临时对象过多，StringBuilder和StringBuffer
+4.StringBuilder和StringBuffer的区别
+   StringBuffer线程安全，性能比较低
+
