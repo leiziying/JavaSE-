@@ -1,0 +1,33 @@
+
+     2.异常：
+          1.作用
+          2.语法
+              1.抛出异常的语法  throw异常类型的对象
+              2.try - catch finally
+                 try{可能发生异常的操作} catch(异常类型 a){}  finally{}
+              3.定义异常（定义一个类，全部来自Throwable接口（父类）下面的）
+             注意： 在自定义异常的时候能永远不要继承Throwable,要不选择继承Exception,要么选择继承RuntimeException
+         3.怎么理解异常
+            try角色：发现安全隐患----巡查员
+            throw角色：发现明确的隐患，并且上报
+            catch角色：合适的处理人
+            finally角色：最终签到
+         4.受查异常（checked exception）和非受查异常(unchecked exception)
+           1.异常的大分类
+             1.无法恢复的错误，环境都整个出问题了
+                硬盘都坏了，电量不稳，网络彻底断了
+                不可恢复的
+                Error
+                Error类型一般不会被catch
+             2.程序员导致的错误，BUG
+                NPE,CCE...继承自RuntimeException
+                BUG尽早暴露，一般也不catch
+                以上两种异常一般不会被catch
+
+             3.网络慢了，磁盘慢了，有修复机会重试
+               catch并且尝试修复
+       如果一个方法可能抛出受查异常的类型，则方法声明中必须给出一个异常列表说明
+       受查异常在语法上有什么特殊要求
+          如果一个方法可能抛出受查异常类型，则方法声明中必须给出一个异常列表说明
+             throws关键字
+             throws异常类型，用逗号分隔（多个）

@@ -1,0 +1,32 @@
+中断线程：
+  1.通过自己控制自定义的状态
+  2.更合理的方式：
+     interrupt()  通知
+     public  boolean isInterrupt()
+     public static boolean Interrupt()
+     线程A  线程B
+     如果B是醒着的，直接把指示灯置亮
+     B在合适的时候选择停止即可
+     如果B是睡着的，则把B叫醒，但不需要把指示灯置亮了
+
+   Thread：
+     启动      start()
+     通知停止  interrupt()
+     等待线程停止  join()
+        join方法系列
+        获取当前线程的Thread对象引用
+
+  线程的状态：
+    1.理解什么是状态
+      线程是通过状态标识当前进程所处的一个情况
+      目的：
+      1.JVM内部管理线程（对内）
+      2.提供给代码的编写人员观察程序的运行情况的（对外）
+    2.多线程有哪些状态  Thread.State
+
+    isAlive（） 判断线程是否还活着
+       线程只要处于不是NEW/TERMINATED就是活着的
+       join(){
+           while(thread.isAlive()){
+           }
+       }
